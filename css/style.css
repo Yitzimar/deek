@@ -347,15 +347,6 @@ header .logo img:hover {
 } 
 
 
-/* ----- MENÚ HAMBURGUESA PARA DISPOSITIVOS MÓVILES ----- */
-.hamburger-menu {
-    display: none;
-    cursor: pointer;
-    font-size: 24px;
-    color: white;
-    margin: 0 20px;
-}
-
 .menu-mobile {
     display: none;
     flex-direction: column;
@@ -368,17 +359,6 @@ header .logo img:hover {
     text-align: center;
 }
 
-.menu-mobile a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 0;
-    display: block;
-    transition: 0.3s;
-}
-
-.menu-mobile a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 
 /* ----- MEDIA QUERIES PARA RESPONSIVE DESIGN ----- */
 @media (max-width: 768px) {
