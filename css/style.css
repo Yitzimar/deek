@@ -49,6 +49,7 @@ header .logo img:hover {
 .navbar {
     display: flex;
     align-items: center;
+    gap: 1rem; /* Espacio entre elementos */
 }
 
 .nav-links {
@@ -56,7 +57,7 @@ header .logo img:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1rem; /* Reducir espacio entre enlaces */
+    gap: 1rem; /* Espacio entre enlaces */
 }
 
 .nav-links a {
@@ -154,30 +155,19 @@ header .logo img:hover {
     }
 
     .nav-links {
-        display: none; /* Ocultar enlaces en móviles */
-        flex-direction: column;
-        position: absolute;
-        top: 50px; /* Posición debajo del header */
-        right: 1rem;
-        background-color: #000;
-        border: 1px solid #D4AF37;
-        border-radius: 5px;
-        padding: 1rem;
-        width: 180px;
-        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+        gap: 0.5rem; /* Reducir espacio entre enlaces en móviles */
     }
 
-    .nav-links.active {
-        display: flex; /* Mostrar enlaces al activar el menú */
-        animation: fadeIn 0.3s ease forwards;
+    .nav-links a {
+        font-size: 0.8rem; /* Reducir tamaño de fuente para móviles */
     }
 
-    .menu-toggle {
-        display: flex; /* Mostrar menú hamburguesa en móviles */
+    .search-bar input[type="text"] {
+        width: 100px; /* Reducir ancho de la barra de búsqueda en móviles */
     }
 
-    .search-bar {
-        display: none; /* Ocultar barra de búsqueda en móviles */
+    .search-bar input[type="text"]:focus {
+        width: 120px; /* Aumentar ancho al enfocar en móviles */
     }
 }
 
@@ -186,23 +176,18 @@ header .logo img:hover {
         max-width: 50px; /* Reducir aún más el logo en móviles pequeños */
     }
 
-    .nav-links {
-        top: 45px; /* Ajustar posición para móviles pequeños */
+    .nav-links a {
+        font-size: 0.7rem; /* Reducir más el tamaño de fuente en móviles pequeños */
+    }
+
+    .search-bar input[type="text"] {
+        width: 80px; /* Reducir más el ancho de la barra de búsqueda en móviles pequeños */
+    }
+
+    .search-bar input[type="text"]:focus {
+        width: 100px; /* Aumentar ancho al enfocar en móviles pequeños */
     }
 }
-
-/* Animación fadeIn */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 /* styles.css - Parte 2: Footer y Animación Elegante */
 
 /* Footer */
