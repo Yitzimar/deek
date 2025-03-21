@@ -1,5 +1,4 @@
 /* styles.css - Header Mejorado */
-/* styles.css - Header Mejorado */
 
 /* Encabezado */
 header {
@@ -38,6 +37,7 @@ header .logo img:hover {
 .navbar {
     display: flex;
     align-items: center;
+    gap: 1rem; /* Espacio entre elementos */
 }
 
 .nav-links {
@@ -45,7 +45,7 @@ header .logo img:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem; /* Espacio entre enlaces */
 }
 
 .nav-links a {
@@ -138,74 +138,48 @@ header .logo img:hover {
     .nav-links {
         display: flex;
         flex-direction: row;
-        position: static;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        width: auto;
-        box-shadow: none;
+        gap: 0.5rem; /* Menos espacio entre enlaces */
     }
 
     .menu-toggle {
-        display: none; /* Ocultar el menú hamburguesa en móviles */
+        display: none; /* Ocultar el menú hamburguesa */
     }
 
     .search-bar {
-        display: flex;
+        display: none; /* Ocultar barra de búsqueda en móviles */
     }
 
     header .container {
-        flex-direction: row;
-        align-items: center;
+        padding: 0 0.5rem; /* Menos padding para aprovechar espacio */
     }
 
     .navbar {
-        flex-grow: 1;
-        justify-content: flex-end;
+        justify-content: flex-start; /* Alinear enlaces cerca del logo */
     }
 
     .nav-links a {
-        font-size: 0.9rem;
-    }
-
-    .search-bar input[type="text"] {
-        width: 120px;
-    }
-
-    .search-bar input[type="text"]:focus {
-        width: 150px;
+        font-size: 0.9rem; /* Tamaño de fuente más pequeño */
     }
 }
 
 @media (max-width: 480px) {
     /* Ajustes para pantallas pequeñas */
     header .logo img {
-        max-width: 80px;
+        max-width: 80px; /* Logo más pequeño */
+    }
+
+    .nav-links {
+        gap: 0.3rem; /* Menos espacio entre enlaces */
     }
 
     .nav-links a {
-        font-size: 0.8rem;
-    }
-
-    .search-bar input[type="text"] {
-        width: 100px;
-    }
-
-    .search-bar input[type="text"]:focus {
-        width: 120px;
+        font-size: 0.8rem; /* Tamaño de fuente más pequeño */
     }
 }
 
-/* Animación fadeIn */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Asegurar que el header no tape el contenido */
+body {
+    padding-top: 70px; /* Compensa la altura del header */
 }
 
 
