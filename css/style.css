@@ -206,78 +206,146 @@ header .logo img:hover {
 
 /* styles.css - Footer Mejorado */
 
-/* ----- ESTILOS GENERALES ----- */
-body {
-    margin: 0;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: Arial, sans-serif;
-    color: white;
-    overflow-x: hidden;
-    min-height: 100vh;
-}
-
-/* ----- CONTENIDO PRINCIPAL ----- */
-.main-content {
-    flex: 1;
-    width: 100%;
-    padding-bottom: 80px; /* Espacio para el footer */
-}
-
-/* ----- FOOTER MEJORADO Y HORIZONTAL ----- */
+/* Footer */
 .footer {
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
+  background-color: #000;
+  padding: 2rem 0;
+  border-top: 2px solid #d4af37; /* Línea dorada */
 }
 
 .footer-content {
-    display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Título en dorado */
+}
+
+.footer-section p, .footer-section a {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.footer-section a:hover {
+  color: #d4af37; /* Dorado al hacer hover */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero {
+    height: 40vh; /* Altura reducida para móviles */
+  }
+
+  .hero-title {
+    font-size: 2.5rem; /* Título más pequeño */
+  }
+
+  .hero-text {
+    font-size: 1.2rem; /* Texto más pequeño */
+  }
+
+  .contacto-container {
+    flex-direction: column; /* Cambio a columna en móviles */
+  }
+
+  .contacto-info, .contacto-form {
+    width: 100%; /* Ocupa todo el ancho */
+  }
+
+  .contacto-info h2, .contacto-form h2 {
+    font-size: 1.8rem; /* Títulos más pequeños */
+  }
+
+  .contacto-info p {
+    font-size: 1rem; /* Texto más pequeño */
+  }
+
+  .form-group input, .form-group textarea {
+    font-size: 0.9rem; /* Texto más pequeño en formularios */
+  }
+
+  .contacto-form .btn {
+    font-size: 1rem; /* Botón más pequeño */
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más estrechas */
+  }
+
+  .footer-section h3 {
+    font-size: 1.3rem; /* Títulos más pequeños */
+  }
+
+  .footer-section p, .footer-section a {
+    font-size: 0.9rem; /* Texto más pequeño */
+  }
 }
 
-.footer .nav-bar {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem; /* Título aún más pequeño */
+  }
 
-.footer .nav-bar a {
-    color: white; /* Color blanco */
-    text-decoration: none;
-    font-size: 14px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    font-weight: bold;
-    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra en el texto */
-}
+  .hero-text {
+    font-size: 1rem; /* Texto aún más pequeño */
+  }
 
-.footer .nav-bar a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    text-shadow: 0px 2px 8px rgba(255, 255, 255, 0.6); /* Sombra más intensa al pasar el mouse */
-}
+  .contacto-info h2, .contacto-form h2 {
+    font-size: 1.5rem; /* Títulos más pequeños */
+  }
 
-/* ----- TEXTO DE DERECHOS RESERVADOS ----- */
-.footer .footer-text {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
-    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra en el texto */
-}
+  .contacto-info p {
+    font-size: 0.9rem; /* Texto más pequeño */
+  }
+
+  .form-group input, .form-group textarea {
+    font-size: 0.8rem; /* Texto más pequeño en formularios */
+  }
+
+  .contacto-form .btn {
+    font-size: 0.9rem; /* Botón más pequeño */
+  }
+
+  .footer-section h3 {
+    font-size: 1.2rem; /* Títulos más pequeños */
+  }
+
+  .footer-section p, .footer-section a {
+    font-size: 0.8rem; /* Texto más pequeño */
+  }
+} 
+
 
 /* ----- MENÚ HAMBURGUESA PARA DISPOSITIVOS MÓVILES ----- */
 .hamburger-menu {
