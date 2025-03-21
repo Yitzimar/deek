@@ -1,18 +1,347 @@
+/* styles.css - Parte 1: Header y Barra de Navegación Mejorada */
+
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 70px; /* Compensa el header fijo */
+}
+
+/* Encabezado */
+header {
+    background-color: #000;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #D4AF37;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+header .logo img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .logo img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #D4AF37;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    width: 150px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    width: 200px;
+    border-color: #b5942e;
+}
+
+.search-bar button {
+    background-color: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #b5942e;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle span {
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: auto;
+        box-shadow: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .search-bar {
+        display: flex;
+    }
+
+    header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .search-bar input[type="text"] {
+        width: 120px;
+    }
+
+    .search-bar input[type="text"]:focus {
+        width: 150px;
+    }
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* styles.css - Parte 2: Footer y Animación Elegante */
+
+/* styles.css - Footer Mejorado */
+
+/* ----- ESTILOS GENERALES ----- */
+body {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ----- CONTENIDO PRINCIPAL ----- */
+.main-content {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 80px; /* Espacio para el footer */
+}
+
+/* ----- FOOTER MEJORADO Y HORIZONTAL ----- */
+.footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .nav-bar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer .nav-bar a {
+    color: white; /* Color blanco */
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra en el texto */
+}
+
+.footer .nav-bar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-shadow: 0px 2px 8px rgba(255, 255, 255, 0.6); /* Sombra más intensa al pasar el mouse */
+}
+
+/* ----- TEXTO DE DERECHOS RESERVADOS ----- */
+.footer .footer-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra en el texto */
+}
+
+/* ----- MENÚ HAMBURGUESA PARA DISPOSITIVOS MÓVILES ----- */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin: 0 20px;
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-mobile a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-mobile a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVE DESIGN ----- */
+@media (max-width: 768px) {
+    .footer .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+}
+
 
 
 /* styles.css - Parte 3: Página de Inicio Elegante y Animada */
+
 /* Sección Hero */
 .hero {
     background-image: url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
-    padding: 8rem 1rem; /* Reducir el padding para móviles */
+    padding: 10rem 2rem;
     position: relative;
     overflow: hidden;
-    min-height: 100vh; /* Asegurar que ocupe al menos el alto de la pantalla */
 }
 
 .hero::before {
@@ -31,17 +360,16 @@
     z-index: 1;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 1rem; /* Añadir padding para móviles */
 }
 
 .hero-title {
-    font-size: 2.5rem; /* Reducir tamaño para móviles */
+    font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-text {
-    font-size: 1.1rem; /* Reducir tamaño para móviles */
+    font-size: 1.3rem;
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease-in-out;
     opacity: 0.9;
@@ -50,11 +378,11 @@
 .hero-button {
     background-color: #D4AF37;
     color: #000;
-    padding: 0.8rem 1.5rem; /* Reducir padding para móviles */
+    padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 1rem; /* Reducir tamaño para móviles */
+    font-size: 1.1rem;
     transition: all 0.3s ease;
     animation: fadeIn 1.5s ease-in-out;
     display: inline-block;
@@ -64,45 +392,6 @@
 .hero-button:hover {
     background-color: #b5942e;
     transform: translateY(-5px) scale(1.05);
-}
-
-/* Media Queries para Responsividad */
-@media (max-width: 768px) {
-    .hero {
-        padding: 6rem 1rem; /* Ajustar padding para tablets */
-    }
-
-    .hero-title {
-        font-size: 2rem; /* Tamaño más pequeño para tablets */
-    }
-
-    .hero-text {
-        font-size: 1rem; /* Tamaño más pequeño para tablets */
-    }
-
-    .hero-button {
-        padding: 0.7rem 1.3rem; /* Ajustar padding para tablets */
-        font-size: 0.9rem; /* Tamaño más pequeño para tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    .hero {
-        padding: 4rem 1rem; /* Ajustar padding para móviles pequeños */
-    }
-
-    .hero-title {
-        font-size: 1.8rem; /* Tamaño más pequeño para móviles pequeños */
-    }
-
-    .hero-text {
-        font-size: 0.9rem; /* Tamaño más pequeño para móviles pequeños */
-    }
-
-    .hero-button {
-        padding: 0.6rem 1.2rem; /* Ajustar padding para móviles pequeños */
-        font-size: 0.8rem; /* Tamaño más pequeño para móviles pequeños */
-    }
 }
 
 /* Animaciones */
@@ -120,7 +409,6 @@
     from { opacity: 0; }
     to { opacity: 1; }
 }
-
 
 /* Sección de Especialidades */
 .especialidades {
