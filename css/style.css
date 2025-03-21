@@ -367,9 +367,6 @@ header .logo img:hover {
         gap: 10px;
     }
 
-    .hamburger-menu {
-        display: block;
-    }
 
     .menu-mobile {
         display: flex;
