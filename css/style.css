@@ -1,15 +1,4 @@
-/* styles.css - Parte 1: Header y Barra de Navegación Mejorada */
-
-/* Estilos globales */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    padding-top: 70px; /* Compensa el header fijo */
-}
+/* styles.css - Header Mejorado */
 
 /* Encabezado */
 header {
@@ -111,7 +100,7 @@ header .logo img:hover {
     background-color: #b5942e;
 }
 
-/* Menú hamburguesa */
+/* Menú hamburguesa (solo para móviles) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -142,17 +131,22 @@ header .logo img:hover {
     transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
+    /* Ajustes para móviles */
     .nav-links {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        width: auto;
-        box-shadow: none;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Ajusta según la altura del header */
+        right: 0;
+        background-color: #000;
+        border: 1px solid #D4AF37;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+        z-index: 999;
     }
 
     .nav-links.active {
@@ -160,33 +154,35 @@ header .logo img:hover {
     }
 
     .menu-toggle {
-        display: none;
-    }
-
-    .search-bar {
         display: flex;
     }
 
+    .search-bar {
+        display: none; /* Ocultar barra de búsqueda en móviles */
+    }
+
     header .container {
-        flex-direction: row;
-        align-items: center;
+        padding: 0 1rem;
     }
 
     .navbar {
-        flex-grow: 1;
         justify-content: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para pantallas pequeñas */
+    header .logo img {
+        max-width: 80px;
     }
 
     .nav-links a {
         font-size: 0.9rem;
     }
 
-    .search-bar input[type="text"] {
-        width: 120px;
-    }
-
-    .search-bar input[type="text"]:focus {
-        width: 150px;
+    .menu-toggle span {
+        width: 20px;
+        height: 2px;
     }
 }
 
@@ -203,11 +199,6 @@ header .logo img:hover {
 }
 
 /* styles.css - Parte 2: Footer y Animación Elegante */
-
-/* styles.css - Footer Mejorado */
-
-/* Footer */
-/* styles.css - Footer Mejorado */
 
 /* Footer */
 .footer {
