@@ -1,32 +1,7 @@
 /* styles.css - Parte 1: Header y Barra de Navegación Mejorada */
+/* styles.css - Parte 1: Header y Barra de Navegación Mejorada */
 
 /* Estilos globales */
-
-/* Animación de fondo */
-body {
-    background-image: url('../img/fondo.jpg'); /* Ruta a tu imagen de fondo */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    animation: movimientoFondo 30s infinite linear;
-}
-
-/* Keyframes para la animación del fondo */
-@keyframes movimientoFondo {
-    0% {
-        background-position: 0% 0%;
-    }
-    50% {
-        background-position: 100% 100%;
-    }
-    100% {
-        background-position: 0% 0%;
-    }
-}
-
-
-
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #000;
@@ -171,30 +146,48 @@ header .logo img:hover {
 /* Responsive */
 @media (max-width: 768px) {
     .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 1rem;
-        background-color: #000;
-        border: 1px solid #D4AF37;
-        border-radius: 5px;
-        padding: 1rem;
-        width: 180px;
-        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+        display: flex;
+        flex-direction: row;
+        position: static;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        width: auto;
+        box-shadow: none;
     }
 
     .nav-links.active {
         display: flex;
-        animation: fadeIn 0.3s ease forwards;
     }
 
     .menu-toggle {
-        display: flex;
+        display: none;
     }
 
     .search-bar {
-        display: none; /* Opcional: esconder búsqueda en móviles */
+        display: flex;
+    }
+
+    header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .navbar {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+
+    .search-bar input[type="text"] {
+        width: 120px;
+    }
+
+    .search-bar input[type="text"]:focus {
+        width: 150px;
     }
 }
 
@@ -209,6 +202,7 @@ header .logo img:hover {
         transform: translateY(0);
     }
 }
+
 
 /* styles.css - Parte 2: Footer y Animación Elegante */
 
