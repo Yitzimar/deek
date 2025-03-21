@@ -1,0 +1,176 @@
+// Estilos para la página de contacto
+.contacto {
+  padding: 4rem 0;
+  background-color: #000; // Fondo negro
+  color: #fff; // Texto blanco
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  // Título de la sección
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d4af37; // Dorado
+  }
+
+  // Contenedor del formulario y la información de contacto
+  .contacto-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; // Dos columnas
+    gap: 2rem; // Espacio entre columnas
+
+    // Estilos para la información de contacto
+    .contacto-info {
+      h3 {
+        font-size: 1.8rem;
+        color: #d4af37; // Dorado
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #ccc; // Texto gris claro
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          font-size: 1.1rem;
+          color: #ccc; // Texto gris claro
+          margin-bottom: 0.5rem;
+
+          strong {
+            color: #d4af37; // Dorado
+          }
+        }
+      }
+    }
+
+    // Estilos para el formulario de contacto
+    .contacto-form {
+      h3 {
+        font-size: 1.8rem;
+        color: #d4af37; // Dorado
+        margin-bottom: 1.5rem;
+      }
+
+      .formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .form-group {
+          label {
+            font-size: 1.1rem;
+            color: #d4af37; // Dorado
+            margin-bottom: 0.5rem;
+            display: block;
+          }
+
+          input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #444; // Borde gris oscuro
+            border-radius: 5px;
+            background-color: #111; // Fondo oscuro
+            color: #fff; // Texto blanco
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+            &:focus {
+              border-color: #d4af37; // Borde dorado al enfocar
+              box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2); // Sombra dorada al enfocar
+              outline: none;
+            }
+
+            &::placeholder {
+              color: #888; // Texto gris para el placeholder
+            }
+          }
+
+          textarea {
+            resize: vertical;
+            min-height: 150px;
+          }
+        }
+
+        .btn {
+          width: 100%;
+          padding: 0.8rem;
+          font-size: 1.2rem;
+          background-color: #d4af37; // Fondo dorado
+          color: #000; // Texto negro
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+
+          &:hover {
+            background-color: #ffd700; // Dorado más brillante al hacer hover
+            transform: scale(1.05); // Efecto de escala al hacer hover
+          }
+
+          &:active {
+            transform: scale(0.95); // Efecto de presión al hacer clic
+          }
+        }
+      }
+    }
+  }
+
+  // Estilos responsivos
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem; // Título más pequeño en móviles
+    }
+
+    .contacto-container {
+      grid-template-columns: 1fr; // Una columna en móviles
+      gap: 1.5rem; // Menor espacio entre columnas
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.8rem; // Título aún más pequeño en móviles pequeños
+    }
+
+    .contacto-container {
+      .contacto-info, .contacto-form {
+        h3 {
+          font-size: 1.5rem; // Títulos más pequeños en móviles pequeños
+        }
+
+        p, li {
+          font-size: 1rem; // Texto más pequeño en móviles pequeños
+        }
+      }
+
+      .contacto-form {
+        .formulario {
+          .form-group {
+            label {
+              font-size: 1rem; // Etiquetas más pequeñas en móviles pequeños
+            }
+
+            input, textarea {
+              font-size: 0.9rem; // Texto más pequeño en móviles pequeños
+            }
+          }
+
+          .btn {
+            font-size: 1rem; // Botón más pequeño en móviles pequeños
+          }
+        }
+      }
+    }
+  }
+}

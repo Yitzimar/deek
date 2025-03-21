@@ -1,0 +1,1100 @@
+/* styles.css - Parte 1: Header y Barra de Navegación Mejorada */
+
+/* Estilos globales */
+
+/* Animación de fondo */
+body {
+    background-image: url('../img/fondo.jpg'); /* Ruta a tu imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: movimientoFondo 30s infinite linear;
+}
+
+/* Keyframes para la animación del fondo */
+@keyframes movimientoFondo {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    padding-top: 70px; /* Compensa el header fijo */
+}
+
+/* Encabezado */
+header {
+    background-color: #000;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #D4AF37;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+header .logo img {
+    max-width: 100px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+header .logo img:hover {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+    transform: translateY(-2px);
+}
+
+/* Barra de búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar input[type="text"] {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid #D4AF37;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    width: 150px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input[type="text"]:focus {
+    width: 200px;
+    border-color: #b5942e;
+}
+
+.search-bar button {
+    background-color: #D4AF37;
+    color: #000;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    margin-left: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+    background-color: #b5942e;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.menu-toggle span {
+    width: 24px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 1rem;
+        background-color: #000;
+        border: 1px solid #D4AF37;
+        border-radius: 5px;
+        padding: 1rem;
+        width: 180px;
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeIn 0.3s ease forwards;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .search-bar {
+        display: none; /* Opcional: esconder búsqueda en móviles */
+    }
+}
+
+/* Animación fadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* styles.css - Parte 2: Footer y Animación Elegante */
+
+/* styles.css - Footer Mejorado */
+
+/* ----- ESTILOS GENERALES ----- */
+body {
+    margin: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ----- CONTENIDO PRINCIPAL ----- */
+.main-content {
+    flex: 1;
+    width: 100%;
+    padding-bottom: 80px; /* Espacio para el footer */
+}
+
+/* ----- FOOTER MEJORADO Y HORIZONTAL ----- */
+.footer {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer .nav-bar {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer .nav-bar a {
+    color: white; /* Color blanco */
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra en el texto */
+}
+
+.footer .nav-bar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    text-shadow: 0px 2px 8px rgba(255, 255, 255, 0.6); /* Sombra más intensa al pasar el mouse */
+}
+
+/* ----- TEXTO DE DERECHOS RESERVADOS ----- */
+.footer .footer-text {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 2px 4px rgba(255, 255, 255, 0.3); /* Sombra en el texto */
+}
+
+/* ----- MENÚ HAMBURGUESA PARA DISPOSITIVOS MÓVILES ----- */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    margin: 0 20px;
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu-mobile a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-mobile a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ----- MEDIA QUERIES PARA RESPONSIVE DESIGN ----- */
+@media (max-width: 768px) {
+    .footer .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+}
+
+
+
+/* styles.css - Parte 3: Página de Inicio Elegante y Animada */
+
+/* Sección Hero */
+.hero {
+    background-image: url('../img/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 10rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-text {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    animation: fadeInUp 1s ease-in-out;
+    opacity: 0.9;
+}
+
+.hero-button {
+    background-color: #D4AF37;
+    color: #000;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+}
+
+.hero-button:hover {
+    background-color: #b5942e;
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Sección de Especialidades */
+.especialidades {
+    padding: 4rem 2rem;
+    background-color: #000;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #D4AF37;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.especialidades-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.especialidad {
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    cursor: pointer;
+}
+
+.especialidad:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
+}
+
+.especialidad-img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.especialidad-title {
+    font-size: 1.5rem;
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+}
+
+.especialidad-desc {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+/* Sección de Reseñas */
+.reseñas {
+    padding: 4rem 2rem;
+    background-color: #000;
+    text-align: center;
+}
+
+.reseñas-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.reseña {
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    cursor: pointer;
+}
+
+.reseña:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
+}
+
+.reseña-text {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+}
+
+.reseña-author {
+    font-size: 0.9rem;
+    color: #D4AF37;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-text {
+        font-size: 1.1rem;
+    }
+
+    .hero-button {
+        font-size: 1rem;
+        padding: 0.8rem 1.6rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .especialidad, .reseña {
+        max-width: 90%;
+    }
+}
+
+/* Página de Contacto Mejorada */
+
+/* Sección de Contacto */
+.contacto {
+    padding: 4rem 2rem;
+    background-color: #000;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #D4AF37;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Formulario */
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Grupo de campos */
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #222;
+    border: 1px solid #D4AF37;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b5942e;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+/* Área de texto */
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Botón de envío */
+.btn-submit {
+    background-color: #D4AF37;
+    color: #000;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: #b5942e;
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Información de Contacto */
+.contacto-info {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.info-title {
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.info-list li {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.info-list li strong {
+    color: #D4AF37;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .info-title {
+        font-size: 1.5rem;
+    }
+
+    .contacto-form {
+        padding: 1.5rem;
+    }
+
+    .btn-submit {
+        width: 100%;
+    }
+}
+
+/* ------------------------------------ */
+/* PARTE 5 - Sección de Reserva */
+/* ------------------------------------ */
+.reserva {
+    padding: 4rem 2rem;
+    background-color: #000;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #D4AF37;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.reserva-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    animation: fadeInUp 1s ease-in-out;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #222;
+    border: 1px solid #D4AF37;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #b5942e;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.btn-submit {
+    background-color: #D4AF37;
+    color: #000;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.btn-submit:hover {
+    background-color: #b5942e;
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* Info de reserva */
+.reserva-info {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.info-title {
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.info-list li {
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.info-list li strong {
+    color: #D4AF37;
+}
+
+/* ------------------------------------ */
+/* PARTE 6 - Sección Sobre Nosotros */
+/* ------------------------------------ */
+.nosotros {
+    padding: 4rem 2rem;
+    background-color: #000;
+    text-align: center;
+}
+
+/* Contenedor general */
+.nosotros-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    animation: fadeInUp 1s ease-in-out;
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.1);
+}
+
+/* Texto general */
+.nosotros-text {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.nosotros-text strong {
+    color: #D4AF37;
+}
+
+/* Imagen historia */
+.historia-imagen {
+    margin-top: 2rem;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.historia-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.2);
+}
+
+/* Sección Equipo */
+.equipo {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.equipo-title,
+.section-title {
+    font-size: 2.5rem;
+    color: #D4AF37;
+    margin-bottom: 2rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Grid del equipo */
+.equipo-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de miembros */
+.miembro {
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1.2s ease-in-out;
+    box-shadow: 0 4px 16px rgba(212, 175, 55, 0.15);
+    text-align: center;
+}
+
+.miembro:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(212, 175, 55, 0.3);
+}
+
+/* Nombre y cargo */
+.miembro-nombre {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.miembro-cargo {
+    font-size: 1rem;
+    color: #D4AF37;
+}
+
+/* Animaciones compartidas */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-title,
+    .equipo-title {
+        font-size: 2rem;
+    }
+
+    .nosotros-content {
+        padding: 1.5rem;
+    }
+
+    .miembro {
+        max-width: 90%;
+    }
+
+    .historia-img {
+        margin-top: 1rem;
+    }
+}
+
+/* -------------------------- */
+/* Parte 7 - Página de Carta  */
+/* -------------------------- */
+
+/* Sección principal del menú */
+.menu {
+    padding: 4rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+/* HERO: Encabezado de la carta */
+.hero {
+    background: url('../img/hero-fondo.jpg') center/cover no-repeat;
+    padding: 5rem 2rem;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Oscurecer el fondo */
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    z-index: 2;
+    position: relative;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    color: #D4AF37;
+    z-index: 2;
+    position: relative;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Categorías del menú */
+.categoria {
+    margin-bottom: 3rem;
+}
+
+.categoria h2 {
+    font-size: 2rem;
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #D4AF37;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Grilla del menú */
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Estilo de cada tarjeta de plato */
+.menu-item {
+    background-color: #111;
+    border: 1px solid #D4AF37;
+    border-radius: 12px;
+    padding: 1rem;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.1);
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Imagen de los platos (más grande y destacada) */
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Ajustar altura uniforme */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Efecto zoom en la imagen al pasar el mouse */
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Información de los platos */
+.menu-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 0.3rem;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.precio {
+    font-size: 1.2rem;
+    color: #D4AF37;
+    font-weight: bold;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE: Adaptaciones para móviles */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .menu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-item {
+        max-width: 90%;
+    }
+
+    .menu-item img {
+        height: 180px;
+    }
+}

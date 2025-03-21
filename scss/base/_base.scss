@@ -1,0 +1,154 @@
+// Estilos base para el cuerpo de la página
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000; // Fondo negro
+  color: #fff; // Letras blancas
+  line-height: 1.6;
+}
+
+// Estilos para los enlaces
+a {
+  color: #d4af37; // Dorado
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ffd700; // Dorado más brillante al hacer hover
+  }
+}
+
+// Estilos para los títulos
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  color: #d4af37; // Dorado
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.75rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.25rem;
+}
+
+// Estilos para los párrafos
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+// Estilos para las listas
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+}
+
+// Estilos para las imágenes
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; // Bordes redondeados para las imágenes
+}
+
+// Estilos para los botones (puedes mover esto a _buttons.scss si lo prefieres)
+button, .btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000; // Texto negro
+  background-color: #d4af37; // Fondo dorado
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #ffd700; // Dorado más brillante al hacer hover
+    transform: scale(1.05); // Efecto de escala al hacer hover
+  }
+}
+
+// Estilos para los formularios (puedes mover esto a _forms.scss si lo prefieres)
+input, textarea, select {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #444; // Borde gris oscuro
+  border-radius: 5px;
+  background-color: #111; // Fondo oscuro
+  color: #fff; // Texto blanco
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    border-color: #d4af37; // Borde dorado al enfocar
+    outline: none;
+  }
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+// Estilos para las tablas (opcional)
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+
+  th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #444; // Borde gris oscuro
+  }
+
+  th {
+    background-color: #111; // Fondo oscuro
+    color: #d4af37; // Texto dorado
+  }
+}
+
+// Estilos para las secciones
+section {
+  padding: 4rem 0;
+
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d4af37; // Dorado
+  }
+
+  .section-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #fff; // Blanco
+  }
+}

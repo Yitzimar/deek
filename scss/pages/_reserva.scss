@@ -1,0 +1,154 @@
+// _reserva.scss
+
+// Variables de colores (consistentes con _nosotros.scss)
+$color-fondo: #000000; // Fondo negro
+$color-texto: #ffffff; // Texto blanco
+$color-dorado: #D4AF37; // Detalles dorados
+$color-borde: rgba(212, 175, 55, 0.3); // Borde dorado con transparencia
+
+// Estilos generales
+.reserva {
+  background-color: $color-fondo;
+  color: $color-texto;
+  padding: 2rem 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: $color-dorado;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  // Formulario de reserva
+  .reserva-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: lighten($color-fondo, 5%);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid $color-borde;
+
+    .form-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: $color-dorado;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        background-color: lighten($color-fondo, 10%);
+        border: 1px solid $color-borde;
+        border-radius: 5px;
+        color: $color-texto;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          outline: none;
+          border-color: $color-dorado;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 150px;
+      }
+    }
+
+    .btn-reservar {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      font-size: 1.1rem;
+      background-color: $color-dorado;
+      color: $color-fondo;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($color-dorado, 10%);
+      }
+    }
+  }
+
+  // Mensaje de confirmación
+  .confirmacion {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: lighten($color-fondo, 5%);
+    border-radius: 10px;
+    border: 1px solid $color-borde;
+
+    h3 {
+      font-size: 1.8rem;
+      color: $color-dorado;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  }
+}
+
+// Media Queries para Responsive Design
+@media (max-width: 768px) {
+  .reserva {
+    .reserva-form {
+      padding: 1.5rem;
+
+      .form-group {
+        margin-bottom: 1rem;
+
+        label {
+          font-size: 1rem;
+        }
+
+        input,
+        select,
+        textarea {
+          padding: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      .btn-reservar {
+        padding: 0.75rem;
+        font-size: 1rem;
+      }
+    }
+
+    .confirmacion {
+      padding: 1rem;
+
+      h3 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}

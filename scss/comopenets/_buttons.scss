@@ -1,0 +1,93 @@
+// Estilos base para botones
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000; // Texto negro
+  background-color: #d4af37; // Fondo dorado
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #ffd700; // Dorado más brillante al hacer hover
+    transform: scale(1.05); // Efecto de escala al hacer hover
+  }
+
+  &:active {
+    transform: scale(0.95); // Efecto de presión al hacer clic
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.5); // Sombra dorada al enfocar
+  }
+}
+
+// Botón secundario
+.btn-secondary {
+  background-color: #111; // Fondo oscuro
+  color: #fff; // Texto blanco
+  border: 2px solid #d4af37; // Borde dorado
+
+  &:hover {
+    background-color: #222; // Fondo más claro al hacer hover
+    border-color: #ffd700; // Borde dorado más brillante al hacer hover
+  }
+}
+
+// Botón grande
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+// Botón pequeño
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+// Botón de bloque (ocupa todo el ancho disponible)
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Botón deshabilitado
+.btn:disabled {
+  background-color: #444; // Fondo gris oscuro
+  color: #888; // Texto gris
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #444; // Mantiene el fondo gris oscuro
+    transform: none; // Sin efecto de escala
+  }
+}
+
+// Botón con ícono
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  i, svg {
+    font-size: 1.2rem;
+  }
+}
+
+// Botón con borde dorado
+.btn-outline {
+  background-color: transparent;
+  color: #d4af37; // Texto dorado
+  border: 2px solid #d4af37; // Borde dorado
+
+  &:hover {
+    background-color: #d4af37; // Fondo dorado al hacer hover
+    color: #000; // Texto negro al hacer hover
+  }
+}

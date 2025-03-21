@@ -1,0 +1,114 @@
+// Estilos base para el encabezado
+.header {
+  background-color: #000; // Fondo negro
+  padding: 1rem 0;
+  border-bottom: 2px solid #d4af37; // Línea dorada en la parte inferior
+  position: sticky;
+  top: 0;
+  z-index: 1000; // Asegura que el header esté por encima de otros elementos
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+  }
+
+  // Logo
+  .logo {
+    img {
+      height: 60px; // Ajusta el tamaño del logo
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1); // Efecto de escala al hacer hover
+      }
+    }
+  }
+
+  // Barra de navegación
+  .navbar {
+    display: flex;
+    align-items: center;
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+
+      li {
+        a {
+          font-size: 1.1rem;
+          font-weight: bold;
+          color: #fff; // Texto blanco
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: #d4af37; // Dorado al hacer hover
+          }
+
+          &.active {
+            color: #d4af37; // Dorado para el enlace activo
+          }
+        }
+      }
+    }
+
+    // Menú hamburguesa (para móviles)
+    .menu-toggle {
+      display: none; // Oculto por defecto
+      flex-direction: column;
+      cursor: pointer;
+
+      .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff; // Barras blancas
+        margin: 4px 0;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      &:hover .bar {
+        background-color: #d4af37; // Barras doradas al hacer hover
+      }
+    }
+  }
+
+  // Estilos responsivos
+  @media (max-width: 768px) {
+    .navbar {
+      .nav-links {
+        display: none; // Oculta los enlaces en móviles
+        flex-direction: column;
+        position: absolute;
+        top: 100%; // Debajo del header
+        left: 0;
+        width: 100%;
+        background-color: #000; // Fondo negro
+        padding: 1rem 0;
+        border-top: 2px solid #d4af37; // Línea dorada en la parte superior
+        z-index: 999;
+
+        &.active {
+          display: flex; // Muestra los enlaces cuando el menú está activo
+        }
+
+        li {
+          text-align: center;
+          margin: 0.5rem 0;
+
+          a {
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      .menu-toggle {
+        display: flex; // Muestra el menú hamburguesa en móviles
+      }
+    }
+  }
+}

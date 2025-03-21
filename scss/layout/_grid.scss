@@ -1,0 +1,113 @@
+// Contenedor de la grilla
+.grid-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Clase base para la grilla
+.grid {
+  display: grid;
+  gap: 2rem; // Espacio entre elementos
+
+  // Grilla de 2 columnas
+  &-2 {
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr; // Una columna en móviles
+    }
+  }
+
+  // Grilla de 3 columnas
+  &-3 {
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); // Dos columnas en móviles
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr; // Una columna en móviles pequeños
+    }
+  }
+
+  // Grilla de 4 columnas
+  &-4 {
+    grid-template-columns: repeat(4, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); // Dos columnas en móviles
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr; // Una columna en móviles pequeños
+    }
+  }
+
+  // Grilla de 6 columnas (útil para galerías o íconos)
+  &-6 {
+    grid-template-columns: repeat(6, 1fr);
+
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr); // Tres columnas en móviles
+    }
+
+    @media (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr); // Dos columnas en móviles pequeños
+    }
+  }
+
+  // Espaciado personalizado
+  &-gap-1 {
+    gap: 1rem;
+  }
+
+  &-gap-2 {
+    gap: 2rem;
+  }
+
+  &-gap-3 {
+    gap: 3rem;
+  }
+
+  // Alineación vertical
+  &-align-center {
+    align-items: center;
+  }
+
+  &-align-start {
+    align-items: flex-start;
+  }
+
+  &-align-end {
+    align-items: flex-end;
+  }
+
+  // Alineación horizontal
+  &-justify-center {
+    justify-items: center;
+  }
+
+  &-justify-start {
+    justify-items: flex-start;
+  }
+
+  &-justify-end {
+    justify-items: flex-end;
+  }
+}
+
+// Clases para elementos de la grilla
+.grid-item {
+  background-color: #111; // Fondo oscuro
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); // Efecto de levitación al hacer hover
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al hacer hover
+  }
+}

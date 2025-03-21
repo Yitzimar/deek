@@ -1,0 +1,144 @@
+/* styles.css */
+
+/* Estilos globales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #111; /* Fondo oscuro */
+    padding: 1rem 0;
+    border-bottom: 2px solid #D4AF37; /* Borde dorado */
+}
+
+header .logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #D4AF37; /* Texto dorado al pasar el mouse */
+}
+
+/* Secciones */
+section {
+    padding: 2rem 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #D4AF37; /* Texto dorado */
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Botones personalizados */
+.btn-custom {
+    background-color: #D4AF37; /* Fondo dorado */
+    color: #000; /* Texto negro */
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #b5942e; /* Fondo dorado oscuro al pasar el mouse */
+}
+
+/* Tarjetas personalizadas */
+.card-custom {
+    background-color: #111; /* Fondo oscuro */
+    border: 1px solid #D4AF37; /* Borde dorado */
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3); /* Sombra dorada */
+}
+
+/* Formularios personalizados */
+.form-custom input,
+.form-custom textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #222; /* Fondo oscuro */
+    border: 1px solid #D4AF37; /* Borde dorado */
+    border-radius: 5px;
+    color: #fff; /* Texto blanco */
+    margin-bottom: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-custom input:focus,
+.form-custom textarea:focus {
+    outline: none;
+    border-color: #b5942e; /* Borde dorado oscuro al enfocar */
+}
+
+/* Pie de página */
+footer {
+    background-color: #111; /* Fondo oscuro */
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 2px solid #D4AF37; /* Borde dorado */
+}
+
+footer .footer-text {
+    color: #fff; /* Texto blanco */
+    margin: 0;
+}
+
+footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer .footer-links a {
+    color: #fff; /* Texto blanco */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #D4AF37; /* Texto dorado al pasar el mouse */
+}

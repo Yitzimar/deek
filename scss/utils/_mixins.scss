@@ -1,0 +1,96 @@
+// _mixins.scss
+
+// Mixin para flexbox
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Mixin para grid
+@mixin grid($columns: 2, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Mixin para bordes redondeados
+@mixin border-radius($radius: 5px) {
+  border-radius: $radius;
+}
+
+// Mixin para sombras
+@mixin box-shadow($color: rgba(212, 175, 55, 0.3), $x: 0, $y: 4px, $blur: 8px) {
+  box-shadow: $x $y $blur $color;
+}
+
+// Mixin para transiciones
+@mixin transition($property: all, $duration: 0.3s, $timing: ease) {
+  transition: $property $duration $timing;
+}
+
+// Mixin para botones
+@mixin button($bg-color: $color-dorado, $text-color: $color-fondo, $padding: 1rem) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: $padding;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+// Mixin para títulos
+@mixin title($size: 2.5rem, $color: $color-dorado, $spacing: 2px) {
+  font-size: $size;
+  color: $color;
+  text-transform: uppercase;
+  letter-spacing: $spacing;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+// Mixin para secciones
+@mixin section($padding: 2rem 0, $bg-color: $color-fondo) {
+  padding: $padding;
+  background-color: $bg-color;
+  color: $color-texto;
+}
+
+// Mixin para imágenes responsivas
+@mixin responsive-image($max-width: 100%, $height: auto, $border-radius: 10px) {
+  max-width: $max-width;
+  height: $height;
+  border-radius: $border-radius;
+  border: 1px solid $color-borde;
+}
+
+// Mixin para tarjetas
+@mixin card($bg-color: lighten($color-fondo, 5%), $padding: 1.5rem, $border-radius: 10px) {
+  background-color: $bg-color;
+  padding: $padding;
+  border-radius: $border-radius;
+  border: 1px solid $color-borde;
+  @include box-shadow;
+}
+
+// Mixin para formularios
+@mixin form-input($bg-color: lighten($color-fondo, 10%), $border-color: $color-borde, $padding: 0.75rem) {
+  width: 100%;
+  padding: $padding;
+  background-color: $bg-color;
+  border: 1px solid $border-color;
+  border-radius: 5px;
+  color: $color-texto;
+  @include transition;
+
+  &:focus {
+    outline: none;
+    border-color: $color-dorado;
+  }
+}

@@ -1,0 +1,93 @@
+// Estilos para la página de la carta
+.carta {
+  padding: 4rem 0;
+  background-color: #000; // Fondo negro
+  color: #fff; // Texto blanco
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  // Título de la sección
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #d4af37; // Dorado
+  }
+
+  // Contenedor de la grilla de platos
+  .platos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Grilla responsiva
+    gap: 2rem; // Espacio entre platos
+
+    // Estilos para cada plato
+    .plato {
+      background-color: #111; // Fondo oscuro
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-10px); // Efecto de levitación al hacer hover
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al hacer hover
+      }
+
+      // Imagen del plato
+      .plato-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; // Ajusta la imagen sin distorsionar
+      }
+
+      // Contenido del plato
+      .plato-body {
+        padding: 1.5rem;
+
+        .plato-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          color: #d4af37; // Dorado
+          margin-bottom: 1rem;
+        }
+
+        .plato-desc {
+          font-size: 1rem;
+          color: #ccc; // Texto gris claro
+          margin-bottom: 1.5rem;
+        }
+
+        .plato-precio {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #d4af37; // Dorado
+        }
+      }
+    }
+  }
+
+  // Estilos responsivos
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem; // Título más pequeño en móviles
+    }
+
+    .platos-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); // Columnas más estrechas en móviles
+      gap: 1.5rem; // Menor espacio entre platos
+    }
+  }
+
+  @media (max-width: 480px) {
+    .section-title {
+      font-size: 1.8rem; // Título aún más pequeño en móviles pequeños
+    }
+
+    .platos-grid {
+      grid-template-columns: 1fr; // Una columna en móviles pequeños
+    }
+  }
+}

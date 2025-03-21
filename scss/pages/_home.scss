@@ -1,0 +1,201 @@
+// Estilos para la página de inicio
+.home {
+  background-color: #000; // Fondo negro
+  color: #fff; // Texto blanco
+
+  // Sección Hero
+  .hero {
+    height: 100vh;
+    background-image: url('../img/fondo.jpg'); // Imagen de fondo
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+
+    .hero-content {
+      max-width: 800px;
+      padding: 0 2rem;
+
+      .hero-title {
+        font-size: 3.5rem;
+        color: #d4af37; // Dorado
+        margin-bottom: 1rem;
+        animation: slideInDown 1s ease-in-out;
+      }
+
+      .hero-text {
+        font-size: 1.5rem;
+        color: #fff; // Texto blanco
+        margin-bottom: 2rem;
+        animation: slideInUp 1s ease-in-out;
+      }
+
+      .hero-button {
+        background-color: #d4af37; // Fondo dorado
+        color: #000; // Texto negro
+        padding: 0.8rem 2rem;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        animation: fadeIn 2s ease-in;
+
+        &:hover {
+          background-color: #ffd700; // Dorado más brillante al hacer hover
+          transform: scale(1.1); // Efecto de escala al hacer hover
+        }
+      }
+    }
+  }
+
+  // Sección de Especialidades
+  .especialidades {
+    padding: 4rem 0;
+    text-align: center;
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #d4af37; // Dorado
+      margin-bottom: 2rem;
+    }
+
+    .especialidades-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Grilla responsiva
+      gap: 2rem; // Espacio entre elementos
+
+      .especialidad {
+        background-color: #111; // Fondo oscuro
+        padding: 1.5rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px); // Efecto de levitación al hacer hover
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al hacer hover
+        }
+
+        .especialidad-img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover; // Ajusta la imagen sin distorsionar
+          border-radius: 10px;
+          margin-bottom: 1rem;
+        }
+
+        .especialidad-title {
+          font-size: 1.5rem;
+          color: #d4af37; // Dorado
+          margin-bottom: 0.5rem;
+        }
+
+        .especialidad-desc {
+          font-size: 1rem;
+          color: #ccc; // Texto gris claro
+        }
+      }
+    }
+  }
+
+  // Sección de Reseñas
+  .reseñas {
+    padding: 4rem 0;
+    text-align: center;
+
+    .section-title {
+      font-size: 2.5rem;
+      color: #d4af37; // Dorado
+      margin-bottom: 2rem;
+    }
+
+    .reseñas-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); // Grilla responsiva
+      gap: 2rem; // Espacio entre elementos
+
+      .reseña {
+        background-color: #111; // Fondo oscuro
+        padding: 1.5rem;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-10px); // Efecto de levitación al hacer hover
+          box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al hacer hover
+        }
+
+        .reseña-text {
+          font-size: 1.2rem;
+          color: #fff; // Texto blanco
+          margin-bottom: 1rem;
+        }
+
+        .reseña-author {
+          font-size: 1rem;
+          color: #d4af37; // Dorado
+        }
+      }
+    }
+  }
+
+  // Animaciones
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  @keyframes slideInDown {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes slideInUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  // Estilos responsivos
+  @media (max-width: 768px) {
+    .hero {
+      .hero-content {
+        .hero-title {
+          font-size: 2.5rem; // Título más pequeño en móviles
+        }
+
+        .hero-text {
+          font-size: 1.2rem; // Texto más pequeño en móviles
+        }
+      }
+    }
+
+    .especialidades, .reseñas {
+      .section-title {
+        font-size: 2rem; // Título más pequeño en móviles
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero {
+      .hero-content {
+        .hero-title {
+          font-size: 2rem; // Título aún más pequeño en móviles pequeños
+        }
+
+        .hero-text {
+          font-size: 1rem; // Texto aún más pequeño en móviles pequeños
+        }
+      }
+    }
+
+    .especialidades, .reseñas {
+      .section-title {
+        font-size: 1.8rem; // Título aún más pequeño en móviles pequeños
+      }
+    }
+  }
+}

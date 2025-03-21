@@ -1,0 +1,135 @@
+// Estilos base para el footer
+.footer {
+  background-color: #000; // Fondo negro
+  color: #fff; // Texto blanco
+  padding: 2rem 0;
+  position: relative;
+  overflow: hidden; // Para que la animación no se salga del footer
+  border-top: 2px solid #d4af37; // Línea dorada en la parte superior
+
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+
+    .footer-text {
+      font-size: 1rem;
+      color: #fff;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+
+      a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #d4af37; // Dorado al hacer hover
+        }
+      }
+    }
+  }
+
+  // Animación de la personita comiendo y caminando
+  .footer-animation {
+    position: absolute;
+    bottom: 10px; // Posición en la parte inferior del footer
+    left: -100px; // Comienza fuera del footer
+    width: 50px;
+    height: 50px;
+    animation: walk 10s linear infinite;
+
+    // Cabeza de la personita
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #fff; // Cabeza blanca
+      border-radius: 50%; // Forma circular
+    }
+
+    // Cuerpo de la personita
+    &::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 5px;
+      width: 10px;
+      height: 20px;
+      background-color: #d4af37; // Cuerpo dorado
+      border-radius: 5px; // Forma rectangular con bordes redondeados
+    }
+
+    // Brazos de la personita
+    .arm {
+      position: absolute;
+      top: 20px;
+      width: 5px;
+      height: 15px;
+      background-color: #d4af37; // Brazos dorados
+      animation: moveArm 0.5s ease-in-out infinite alternate;
+
+      &.left {
+        left: -5px;
+        transform-origin: top left;
+      }
+
+      &.right {
+        right: -5px;
+        transform-origin: top right;
+      }
+    }
+
+    // Empanada o arepa que la personita está comiendo
+    .food {
+      position: absolute;
+      top: 5px;
+      left: 25px;
+      width: 10px;
+      height: 10px;
+      background-color: #ffd700; // Color dorado para la empanada/arepa
+      border-radius: 50%; // Forma circular
+      animation: moveFood 0.5s ease-in-out infinite alternate;
+    }
+  }
+}
+
+// Animación para caminar
+@keyframes walk {
+  0% {
+    transform: translateX(-100px); // Comienza fuera del footer
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)); // Termina fuera del footer
+  }
+}
+
+// Animación para mover los brazos
+@keyframes moveArm {
+  0% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+// Animación para mover la comida
+@keyframes moveFood {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}

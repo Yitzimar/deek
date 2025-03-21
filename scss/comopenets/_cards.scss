@@ -1,0 +1,111 @@
+// Estilos base para tarjetas
+.card {
+  background-color: #111; // Fondo oscuro
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px); // Efecto de levitación al hacer hover
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); // Sombra más pronunciada al hacer hover
+  }
+
+  // Imagen de la tarjeta
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  // Contenido de la tarjeta
+  .card-body {
+    padding: 1.5rem;
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d4af37; // Dorado
+      margin-bottom: 1rem;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #fff; // Texto blanco
+      margin-bottom: 1.5rem;
+    }
+
+    .card-price {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #d4af37; // Dorado
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+// Tarjeta con borde dorado
+.card-outline {
+  background-color: transparent;
+  border: 2px solid #d4af37; // Borde dorado
+
+  .card-body {
+    .card-title, .card-text, .card-price {
+      color: #d4af37; // Dorado
+    }
+  }
+
+  &:hover {
+    background-color: rgba(212, 175, 55, 0.1); // Fondo semi-transparente dorado al hacer hover
+  }
+}
+
+// Tarjeta pequeña
+.card-sm {
+  .card-img {
+    height: 150px;
+  }
+
+  .card-body {
+    padding: 1rem;
+
+    .card-title {
+      font-size: 1.25rem;
+    }
+
+    .card-text {
+      font-size: 0.875rem;
+    }
+
+    .card-price {
+      font-size: 1rem;
+    }
+  }
+}
+
+// Tarjeta grande
+.card-lg {
+  .card-img {
+    height: 250px;
+  }
+
+  .card-body {
+    padding: 2rem;
+
+    .card-title {
+      font-size: 1.75rem;
+    }
+
+    .card-text {
+      font-size: 1.1rem;
+    }
+
+    .card-price {
+      font-size: 1.5rem;
+    }
+  }
+}

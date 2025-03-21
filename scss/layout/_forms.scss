@@ -1,0 +1,108 @@
+// Estilos base para formularios
+.formulario {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #111; // Fondo oscuro
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  // Grupo de campos
+  .form-group {
+    margin-bottom: 1.5rem;
+
+    label {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #d4af37; // Dorado
+      margin-bottom: 0.5rem;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #444; // Borde gris oscuro
+      border-radius: 5px;
+      background-color: #222; // Fondo gris oscuro
+      color: #fff; // Texto blanco
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:focus {
+        border-color: #d4af37; // Borde dorado al enfocar
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2); // Sombra dorada al enfocar
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #888; // Texto gris para el placeholder
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    select {
+      appearance: none; // Elimina el estilo predeterminado del select
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23d4af37'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0.8rem center;
+      background-size: 12px;
+    }
+  }
+
+  // Botón del formulario
+  .btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    background-color: #d4af37; // Fondo dorado
+    color: #000; // Texto negro
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      background-color: #ffd700; // Dorado más brillante al hacer hover
+      transform: scale(1.05); // Efecto de escala al hacer hover
+    }
+
+    &:active {
+      transform: scale(0.95); // Efecto de presión al hacer clic
+    }
+  }
+
+  // Mensajes de error (opcional)
+  .error-message {
+    color: #e74c3c; // Rojo para mensajes de error
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+}
+
+// Estilos responsivos
+@media (max-width: 768px) {
+  .formulario {
+    padding: 1.5rem;
+
+    .form-group {
+      margin-bottom: 1rem;
+
+      label {
+        font-size: 1rem;
+      }
+
+      input, textarea, select {
+        font-size: 0.9rem;
+      }
+    }
+
+    .btn {
+      font-size: 1rem;
+    }
+  }
+}

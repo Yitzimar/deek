@@ -1,0 +1,60 @@
+// _variables.scss
+
+// Colores
+$color-fondo: #000000; // Fondo negro
+$color-texto: #ffffff; // Texto blanco
+$color-dorado: #D4AF37; // Detalles dorados
+$color-borde: rgba(212, 175, 55, 0.3); // Borde dorado con transparencia
+$color-error: #ff4d4d; // Color para mensajes de error
+$color-exito: #4dff4d; // Color para mensajes de éxito
+
+// Fuentes
+$fuente-principal: 'Arial', sans-serif;
+$fuente-secundaria: 'Georgia', serif;
+
+// Tamaños de fuente
+$fs-small: 0.875rem; // 14px
+$fs-normal: 1rem; // 16px
+$fs-medium: 1.25rem; // 20px
+$fs-large: 1.5rem; // 24px
+$fs-xlarge: 2rem; // 32px
+$fs-xxlarge: 2.5rem; // 40px
+
+// Espaciado
+$espacio-xs: 0.5rem; // 8px
+$espacio-sm: 1rem; // 16px
+$espacio-md: 1.5rem; // 24px
+$espacio-lg: 2rem; // 32px
+$espacio-xl: 3rem; // 48px
+
+// Bordes
+$borde-redondeado: 5px;
+$borde-circular: 50%;
+
+// Sombras
+$sombra-dorada: 0 4px 8px rgba(212, 175, 55, 0.3);
+$sombra-negra: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+// Transiciones
+$transicion-rapida: 0.3s ease;
+$transicion-lenta: 0.6s ease;
+
+// Breakpoints para responsive design
+$breakpoint-xs: 480px; // Móviles pequeños
+$breakpoint-sm: 768px; // Tablets
+$breakpoint-md: 992px; // Pantallas medianas
+$breakpoint-lg: 1200px; // Pantallas grandes
+$breakpoint-xl: 1440px; // Pantallas extra grandes
+
+// Z-index
+$z-index-bajo: 10;
+$z-index-medio: 50;
+$z-index-alto: 100;
+
+// Rutas de imágenes
+$ruta-imagenes: '../img/';
+
+// Alturas y anchos
+$header-height: 80px;
+$footer-height: 120px;
+$max-width-container: 1200px;
