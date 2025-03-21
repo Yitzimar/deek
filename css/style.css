@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    padding-top: 70px; /* Compensa el header fijo */
+    padding-top: 60px; /* Compensa el header fijo (reducido para móviles) */
 }
 
 /* Encabezado */
@@ -36,7 +36,7 @@ header .container {
 
 /* Logo */
 header .logo img {
-    max-width: 100px;
+    max-width: 80px; /* Reducir tamaño del logo para móviles */
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
@@ -56,14 +56,14 @@ header .logo img:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem; /* Reducir espacio entre enlaces */
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reducir tamaño de fuente para móviles */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -76,7 +76,7 @@ header .logo img:hover {
 .search-bar {
     display: flex;
     align-items: center;
-    margin-left: 1.5rem;
+    margin-left: 1rem; /* Reducir margen para móviles */
     transition: all 0.3s ease;
 }
 
@@ -87,12 +87,12 @@ header .logo img:hover {
     background-color: #000;
     color: #fff;
     outline: none;
-    width: 150px;
+    width: 120px; /* Reducir ancho para móviles */
     transition: all 0.3s ease;
 }
 
 .search-bar input[type="text"]:focus {
-    width: 200px;
+    width: 150px; /* Aumentar ancho al enfocar */
     border-color: #b5942e;
 }
 
@@ -114,7 +114,7 @@ header .logo img:hover {
 
 /* Menú hamburguesa */
 .menu-toggle {
-    display: none;
+    display: none; /* Ocultar en desktop */
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
@@ -145,49 +145,49 @@ header .logo img:hover {
 
 /* Responsive */
 @media (max-width: 768px) {
+    body {
+        padding-top: 50px; /* Reducir padding-top para móviles */
+    }
+
+    header .logo img {
+        max-width: 60px; /* Reducir más el logo en móviles */
+    }
+
     .nav-links {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        width: auto;
-        box-shadow: none;
+        display: none; /* Ocultar enlaces en móviles */
+        flex-direction: column;
+        position: absolute;
+        top: 50px; /* Posición debajo del header */
+        right: 1rem;
+        background-color: #000;
+        border: 1px solid #D4AF37;
+        border-radius: 5px;
+        padding: 1rem;
+        width: 180px;
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex; /* Mostrar enlaces al activar el menú */
+        animation: fadeIn 0.3s ease forwards;
     }
 
     .menu-toggle {
-        display: none;
+        display: flex; /* Mostrar menú hamburguesa en móviles */
     }
 
     .search-bar {
-        display: flex;
+        display: none; /* Ocultar barra de búsqueda en móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        max-width: 50px; /* Reducir aún más el logo en móviles pequeños */
     }
 
-    header .container {
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .navbar {
-        flex-grow: 1;
-        justify-content: flex-end;
-    }
-
-    .nav-links a {
-        font-size: 0.9rem;
-    }
-
-    .search-bar input[type="text"] {
-        width: 120px;
-    }
-
-    .search-bar input[type="text"]:focus {
-        width: 150px;
+    .nav-links {
+        top: 45px; /* Ajustar posición para móviles pequeños */
     }
 }
 
@@ -202,7 +202,6 @@ header .logo img:hover {
         transform: translateY(0);
     }
 }
-
 
 /* styles.css - Parte 2: Footer y Animación Elegante */
 
