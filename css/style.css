@@ -348,17 +348,18 @@ header .logo img:hover {
 
 
 /* styles.css - Parte 3: Página de Inicio Elegante y Animada */
-
 /* Sección Hero */
 .hero {
     background-image: url('../img/fondo.jpg');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
-    padding: 10rem 2rem;
+    padding: 8rem 1rem; /* Reducir el padding para móviles */
     position: relative;
     overflow: hidden;
+    min-height: 100vh; /* Asegurar que ocupe al menos el alto de la pantalla */
 }
 
 .hero::before {
@@ -377,16 +378,17 @@ header .logo img:hover {
     z-index: 1;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 0 1rem; /* Añadir padding para móviles */
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Reducir tamaño para móviles */
     margin-bottom: 1rem;
     animation: fadeInDown 1s ease-in-out;
 }
 
 .hero-text {
-    font-size: 1.3rem;
+    font-size: 1.1rem; /* Reducir tamaño para móviles */
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease-in-out;
     opacity: 0.9;
@@ -395,11 +397,11 @@ header .logo img:hover {
 .hero-button {
     background-color: #D4AF37;
     color: #000;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem; /* Reducir padding para móviles */
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1rem; /* Reducir tamaño para móviles */
     transition: all 0.3s ease;
     animation: fadeIn 1.5s ease-in-out;
     display: inline-block;
@@ -409,6 +411,45 @@ header .logo img:hover {
 .hero-button:hover {
     background-color: #b5942e;
     transform: translateY(-5px) scale(1.05);
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem; /* Ajustar padding para tablets */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Tamaño más pequeño para tablets */
+    }
+
+    .hero-text {
+        font-size: 1rem; /* Tamaño más pequeño para tablets */
+    }
+
+    .hero-button {
+        padding: 0.7rem 1.3rem; /* Ajustar padding para tablets */
+        font-size: 0.9rem; /* Tamaño más pequeño para tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 1rem; /* Ajustar padding para móviles pequeños */
+    }
+
+    .hero-title {
+        font-size: 1.8rem; /* Tamaño más pequeño para móviles pequeños */
+    }
+
+    .hero-text {
+        font-size: 0.9rem; /* Tamaño más pequeño para móviles pequeños */
+    }
+
+    .hero-button {
+        padding: 0.6rem 1.2rem; /* Ajustar padding para móviles pequeños */
+        font-size: 0.8rem; /* Tamaño más pequeño para móviles pequeños */
+    }
 }
 
 /* Animaciones */
@@ -426,6 +467,7 @@ header .logo img:hover {
     from { opacity: 0; }
     to { opacity: 1; }
 }
+
 
 /* Sección de Especialidades */
 .especialidades {
