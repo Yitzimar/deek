@@ -359,22 +359,6 @@ header .logo img:hover {
     text-align: center;
 }
 
-
-/* ----- MEDIA QUERIES PARA RESPONSIVE DESIGN ----- */
-@media (max-width: 768px) {
-    .footer .nav-bar {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-
-    .menu-mobile {
-        display: flex;
-    }
-}
-
-
-
 /* styles.css - Parte 3: Página de Inicio Elegante y Animada */
 
 /* Sección Hero */
