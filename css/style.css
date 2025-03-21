@@ -100,15 +100,7 @@ header .logo img:hover {
     background-color: #b5942e;
 }
 
-/* Menú hamburguesa (solo para móviles) */
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 1rem;
-    transition: transform 0.3s ease;
-}
+
 
 .menu-toggle span {
     width: 24px;
