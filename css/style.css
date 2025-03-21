@@ -207,10 +207,17 @@ header .logo img:hover {
 /* styles.css - Footer Mejorado */
 
 /* Footer */
+/* styles.css - Footer Mejorado */
+
+/* Footer */
 .footer {
   background-color: #000;
   padding: 2rem 0;
   border-top: 2px solid #d4af37; /* Línea dorada */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto; /* Asegura que el footer se quede al final */
 }
 
 .footer-content {
@@ -231,10 +238,12 @@ header .logo img:hover {
 .footer-section p, .footer-section a {
   font-size: 1rem;
   color: #fff;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
 }
 
 .footer-section a:hover {
   color: #d4af37; /* Dorado al hacer hover */
+  text-decoration: underline; /* Subrayado al hacer hover */
 }
 
 .footer-bottom {
@@ -242,6 +251,7 @@ header .logo img:hover {
   padding: 1rem 0;
   border-top: 1px solid #333;
   margin-top: 2rem;
+  color: #fff;
 }
 
 /* Animaciones */
@@ -344,19 +354,18 @@ header .logo img:hover {
   .footer-section p, .footer-section a {
     font-size: 0.8rem; /* Texto más pequeño */
   }
-} 
-
+}
 
 .menu-mobile {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 10px 0;
-    text-align: center;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px 0;
+  text-align: center;
 }
 
 /* styles.css - Parte 3: Página de Inicio Elegante y Animada */
